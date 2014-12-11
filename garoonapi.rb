@@ -94,7 +94,8 @@ class GaroonAPI
 		return sc.call(action) do
 			# Garoon requires ``Action'' and ``Timestamp''
 			# in SOAP header.
-			soap_header 'Action' => action,
+			soap_header \
+			    'Action' => action,
 			    'Security' => {
 			        'UsernameToken' => utok
 			    },
