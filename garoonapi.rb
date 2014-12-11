@@ -103,7 +103,7 @@ class GaroonAPI
 				Expires: '2037-08-12T14:45:00Z'		# XXX
 			    },
 			    Locale: 'en'
-			# Garoon API functiona take paramters as follows.
+			# Garoon API function take paramters as follows.
 			message parameters: parameters
 		end
 	end
