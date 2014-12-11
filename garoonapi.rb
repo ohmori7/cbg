@@ -38,7 +38,7 @@ require 'savon'
 class GaroonAPI
 	GAPI_PATH = '/cgi-bin/cbgrn/grn.cgi'
 	# namespace is defined as ``targetNamespace'' in WSDL.
-	CAPI_NAMESPACE = 'http://wsdl.cybozu.co.jp/api/2008'
+	GAPI_NAMESPACE = 'http://wsdl.cybozu.co.jp/api/2008'
 
 	def initialize(uribase, username, password)
 		@uribase = uribase
@@ -93,7 +93,7 @@ class GaroonAPI
 			# Hence we need to manually speficy endpoint and
 			# namespace as follows.
 			endpoint uri
-			namespace CAPI_NAMESPACE
+			namespace GAPI_NAMESPACE
 			# Garoon does not need a namespace identifier.
 			namespace_identifier nil
 			# Garoon does not adopt camel case.
