@@ -42,7 +42,7 @@ g = GaroonAPI.new(uribase, username, password)
 r = g.call(:CabinetGetFolderInfo)
 #p r	# raw response
 folders = r.doc.xpath('//folder')
-puts 'Folder information'
+puts 'Folder information:'
 folders.each do |f|
 	printf "% 5s % 5s %-14s %s\n", f.attr('id'), f.attr('code'),
 	    f.xpath('title').inner_text,
