@@ -119,7 +119,7 @@ class GaroonAPI
 		password = @password
 		return sc.call(action) do
 			# Garoon requires ``Action'' and ``Timestamp''
-			# in SOAP header.
+			# in SOAP header at least.
 			soap_header \
 			    'Action' => action,
 			    'Security' => {
@@ -133,7 +133,7 @@ class GaroonAPI
 				'Expires' => '2037-08-12T14:45:00Z'	# XXX
 			    },
 			    'Locale' => 'en'
-			# Garoon API function take paramters as follows.
+			# Garoon API function take paramters as hash.
 			message 'parameters' => parameters
 		end
 	end
