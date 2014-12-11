@@ -30,7 +30,7 @@ class GaroonAPI
 		t = {
 			'Base'		=> '/cbpapi/base/api',
 			'Schedule'	=> '/cbpapi/schedule/api',
-			'Address'	=> 'cbpapi/address/api',
+			'Address'	=> '/cbpapi/address/api',
 			'Workflow'	=> '/cbpapi/workflow/api',
 			'Mail'		=> '/cbpapi/mail/api',
 			'Message'	=> '/cbpapi/message/api',
