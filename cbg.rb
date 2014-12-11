@@ -26,3 +26,9 @@ r = g.call(:BaseGetApplicationStatus)
 p r	# raw response
 p r.doc	# Nokogiri style
 # do something...
+
+# get workflow (this needs administrative privilege)
+params = { 'manage_request_parmeter' => { '@request_form_id' => '1' } }
+r = g.call(:WorkflowGetRequests, params)
+p r	# raw response
+p r.doc	# Nokogiri style
