@@ -90,14 +90,18 @@ class GaroonAPI
 
 	def call(action, parameters = nil)
 		sc = soap_init(action2uri(action))
-		utok = { 'Username' => @username, 'Password' => @password }
+		username = @username
+		password = @password
 		return sc.call(action) do
 			# Garoon requires ``Action'' and ``Timestamp''
 			# in SOAP header.
 			soap_header \
 			    'Action' => action,
 			    'Security' => {
-			        'UsernameToken' => utok
+			        'UsernameToken' =>  {
+				    'Username' => username,
+				    'Password' => password
+				}
 			    },
 			    'Timestamp' => {
 				'Created' => '2037-08-12T14:45:00Z',	# XXX
